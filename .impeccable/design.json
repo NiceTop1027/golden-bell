@@ -1,0 +1,699 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T11:21:18.837660+00:00",
+  "title": "Design System: 덕영 골든벨",
+  "extensions": {
+    "colorMeta": {
+      "school": {
+        "role": "primary",
+        "displayName": "학교 파랑",
+        "canonical": "#3d9aff",
+        "tonalRamp": [
+          "#123a6b",
+          "#174d99",
+          "#1f6fe0",
+          "#2f85f0",
+          "#3d9aff",
+          "#9cc8ff",
+          "#dbeaff",
+          "#eef6ff"
+        ]
+      },
+      "school-deep": {
+        "role": "primary",
+        "displayName": "진한 학교 파랑",
+        "canonical": "#1f6fe0",
+        "tonalRamp": [
+          "#123a6b",
+          "#174d99",
+          "#1f6fe0",
+          "#2f85f0",
+          "#3d9aff",
+          "#9cc8ff",
+          "#dbeaff",
+          "#eef6ff"
+        ]
+      },
+      "school-50": {
+        "role": "primary",
+        "displayName": "가장 연한 파랑",
+        "canonical": "#eef6ff",
+        "tonalRamp": [
+          "#123a6b",
+          "#174d99",
+          "#1f6fe0",
+          "#2f85f0",
+          "#3d9aff",
+          "#9cc8ff",
+          "#dbeaff",
+          "#eef6ff"
+        ]
+      },
+      "school-100": {
+        "role": "primary",
+        "displayName": "연한 파랑",
+        "canonical": "#dbeaff",
+        "tonalRamp": [
+          "#123a6b",
+          "#174d99",
+          "#1f6fe0",
+          "#2f85f0",
+          "#3d9aff",
+          "#9cc8ff",
+          "#dbeaff",
+          "#eef6ff"
+        ]
+      },
+      "opt1": {
+        "role": "secondary",
+        "displayName": "보기 ① 빨강",
+        "canonical": "#f04452",
+        "tonalRamp": [
+          "#481419",
+          "#782229",
+          "#a83039",
+          "#d33c48",
+          "#f04452",
+          "#f68f97",
+          "#fbd0d4",
+          "#fef0f1"
+        ]
+      },
+      "opt2": {
+        "role": "secondary",
+        "displayName": "보기 ② 파랑",
+        "canonical": "#2f7df6",
+        "tonalRamp": [
+          "#0e264a",
+          "#183e7b",
+          "#2158ac",
+          "#296ed8",
+          "#2f7df6",
+          "#82b1fa",
+          "#cbdefd",
+          "#eef5fe"
+        ]
+      },
+      "opt3": {
+        "role": "secondary",
+        "displayName": "보기 ③ 노랑",
+        "canonical": "#ffc12e",
+        "tonalRamp": [
+          "#4d3a0e",
+          "#806017",
+          "#b28720",
+          "#e0aa28",
+          "#ffc12e",
+          "#ffda82",
+          "#fff0cb",
+          "#fffaee"
+        ]
+      },
+      "opt4": {
+        "role": "secondary",
+        "displayName": "보기 ④ 초록",
+        "canonical": "#0e9f5f",
+        "tonalRamp": [
+          "#04301d",
+          "#075030",
+          "#0a6f42",
+          "#0c8c54",
+          "#0e9f5f",
+          "#6ec59f",
+          "#c3e7d7",
+          "#ecf7f2"
+        ]
+      },
+      "opt5": {
+        "role": "secondary",
+        "displayName": "보기 ⑤ 보라",
+        "canonical": "#8a5cf6",
+        "tonalRamp": [
+          "#291c4a",
+          "#452e7b",
+          "#6140ac",
+          "#7951d8",
+          "#8a5cf6",
+          "#b99dfa",
+          "#e2d6fd",
+          "#f6f2fe"
+        ]
+      },
+      "red": {
+        "role": "tertiary",
+        "displayName": "탈락 빨강",
+        "canonical": "#f04452",
+        "tonalRamp": [
+          "#481419",
+          "#782229",
+          "#a83039",
+          "#d33c48",
+          "#f04452",
+          "#f68f97",
+          "#fbd0d4",
+          "#fef0f1"
+        ]
+      },
+      "red-deep": {
+        "role": "tertiary",
+        "displayName": "진한 탈락 빨강",
+        "canonical": "#d22030",
+        "tonalRamp": [
+          "#3f0a0e",
+          "#691018",
+          "#931622",
+          "#b91c2a",
+          "#d22030",
+          "#e47983",
+          "#f4c7cb",
+          "#fbedee"
+        ]
+      },
+      "red-50": {
+        "role": "tertiary",
+        "displayName": "연한 빨강 안내",
+        "canonical": "#fff0f1",
+        "tonalRamp": [
+          "#4d4848",
+          "#807878",
+          "#b2a8a9",
+          "#e0d3d4",
+          "#fff0f1",
+          "#fff6f7",
+          "#fffbfc",
+          "#fffefe"
+        ]
+      },
+      "green": {
+        "role": "tertiary",
+        "displayName": "정답 초록",
+        "canonical": "#0e9f5f",
+        "tonalRamp": [
+          "#04301d",
+          "#075030",
+          "#0a6f42",
+          "#0c8c54",
+          "#0e9f5f",
+          "#6ec59f",
+          "#c3e7d7",
+          "#ecf7f2"
+        ]
+      },
+      "green-50": {
+        "role": "tertiary",
+        "displayName": "연한 초록 안내",
+        "canonical": "#e9f8f0",
+        "tonalRamp": [
+          "#464a48",
+          "#747c78",
+          "#a3aea8",
+          "#cddad3",
+          "#e9f8f0",
+          "#f2fbf6",
+          "#fafdfb",
+          "#fdfefe"
+        ]
+      },
+      "amber": {
+        "role": "tertiary",
+        "displayName": "골든벨 노랑",
+        "canonical": "#ffc12e",
+        "tonalRamp": [
+          "#4d3a0e",
+          "#806017",
+          "#b28720",
+          "#e0aa28",
+          "#ffc12e",
+          "#ffda82",
+          "#fff0cb",
+          "#fffaee"
+        ]
+      },
+      "amber-50": {
+        "role": "tertiary",
+        "displayName": "연한 노랑 안내",
+        "canonical": "#fff8e6",
+        "tonalRamp": [
+          "#4d4a45",
+          "#807c73",
+          "#b2aea1",
+          "#e0daca",
+          "#fff8e6",
+          "#fffbf0",
+          "#fffdf9",
+          "#fffefd"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "카드 흰색",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#191f28",
+          "#333d4b",
+          "#4e5968",
+          "#8b95a1",
+          "#d1d6db",
+          "#e5e8eb",
+          "#f2f4f6",
+          "#ffffff"
+        ]
+      },
+      "grey-50": {
+        "role": "neutral",
+        "displayName": "회색 50",
+        "canonical": "#f9fafb",
+        "tonalRamp": [
+          "#191f28",
+          "#333d4b",
+          "#4e5968",
+          "#6b7684",
+          "#8b95a1",
+          "#b0b8c1",
+          "#d1d6db",
+          "#e5e8eb",
+          "#f2f4f6",
+          "#f9fafb"
+        ]
+      },
+      "grey-100": {
+        "role": "neutral",
+        "displayName": "회색 100",
+        "canonical": "#f2f4f6",
+        "tonalRamp": [
+          "#191f28",
+          "#333d4b",
+          "#4e5968",
+          "#6b7684",
+          "#8b95a1",
+          "#b0b8c1",
+          "#d1d6db",
+          "#e5e8eb",
+          "#f2f4f6",
+          "#f9fafb"
+        ]
+      },
+      "grey-200": {
+        "role": "neutral",
+        "displayName": "회색 200",
+        "canonical": "#e5e8eb",
+        "tonalRamp": [
+          "#191f28",
+          "#333d4b",
+          "#4e5968",
+          "#6b7684",
+          "#8b95a1",
+          "#b0b8c1",
+          "#d1d6db",
+          "#e5e8eb",
+          "#f2f4f6",
+          "#f9fafb"
+        ]
+      },
+      "grey-300": {
+        "role": "neutral",
+        "displayName": "회색 300",
+        "canonical": "#d1d6db",
+        "tonalRamp": [
+          "#191f28",
+          "#333d4b",
+          "#4e5968",
+          "#6b7684",
+          "#8b95a1",
+          "#b0b8c1",
+          "#d1d6db",
+          "#e5e8eb",
+          "#f2f4f6",
+          "#f9fafb"
+        ]
+      },
+      "grey-400": {
+        "role": "neutral",
+        "displayName": "회색 400",
+        "canonical": "#b0b8c1",
+        "tonalRamp": [
+          "#191f28",
+          "#333d4b",
+          "#4e5968",
+          "#6b7684",
+          "#8b95a1",
+          "#b0b8c1",
+          "#d1d6db",
+          "#e5e8eb",
+          "#f2f4f6",
+          "#f9fafb"
+        ]
+      },
+      "grey-500": {
+        "role": "neutral",
+        "displayName": "회색 500",
+        "canonical": "#8b95a1",
+        "tonalRamp": [
+          "#191f28",
+          "#333d4b",
+          "#4e5968",
+          "#6b7684",
+          "#8b95a1",
+          "#b0b8c1",
+          "#d1d6db",
+          "#e5e8eb",
+          "#f2f4f6",
+          "#f9fafb"
+        ]
+      },
+      "grey-600": {
+        "role": "neutral",
+        "displayName": "회색 600",
+        "canonical": "#6b7684",
+        "tonalRamp": [
+          "#191f28",
+          "#333d4b",
+          "#4e5968",
+          "#6b7684",
+          "#8b95a1",
+          "#b0b8c1",
+          "#d1d6db",
+          "#e5e8eb",
+          "#f2f4f6",
+          "#f9fafb"
+        ]
+      },
+      "grey-700": {
+        "role": "neutral",
+        "displayName": "회색 700",
+        "canonical": "#4e5968",
+        "tonalRamp": [
+          "#191f28",
+          "#333d4b",
+          "#4e5968",
+          "#6b7684",
+          "#8b95a1",
+          "#b0b8c1",
+          "#d1d6db",
+          "#e5e8eb",
+          "#f2f4f6",
+          "#f9fafb"
+        ]
+      },
+      "grey-800": {
+        "role": "neutral",
+        "displayName": "회색 800",
+        "canonical": "#333d4b",
+        "tonalRamp": [
+          "#191f28",
+          "#333d4b",
+          "#4e5968",
+          "#6b7684",
+          "#8b95a1",
+          "#b0b8c1",
+          "#d1d6db",
+          "#e5e8eb",
+          "#f2f4f6",
+          "#f9fafb"
+        ]
+      },
+      "grey-900": {
+        "role": "neutral",
+        "displayName": "회색 900",
+        "canonical": "#191f28",
+        "tonalRamp": [
+          "#191f28",
+          "#333d4b",
+          "#4e5968",
+          "#6b7684",
+          "#8b95a1",
+          "#b0b8c1",
+          "#d1d6db",
+          "#e5e8eb",
+          "#f2f4f6",
+          "#f9fafb"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "학생 화면 결과·대기 제목. .display 클래스(800, -0.03em)."
+      },
+      "stage-question": {
+        "displayName": "무대 문제",
+        "purpose": "무대 문제 카드 88px, 긴 문제 68px. 정답 글자 128px."
+      },
+      "stage-label": {
+        "displayName": "무대 보조",
+        "purpose": "무대 집계 라벨·해설 34–44px."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "확인창·콘솔 카드 제목."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "버튼 글자와 보기 타일 글자."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "생존 수, 상태 띠, 안내 상자."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "콘솔 표와 보조 설명."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "초·인원·코드. 고정폭 800."
+      }
+    },
+    "shadows": [
+      {
+        "name": "pop",
+        "value": "0 12px 32px rgba(25, 31, 40, 0.12)",
+        "purpose": "무대 마감 도장·우승 카드·떠 있는 버튼."
+      },
+      {
+        "name": "soft",
+        "value": "0 2px 8px rgba(25, 31, 40, 0.06)",
+        "purpose": "무대 대기실 QR 카드."
+      },
+      {
+        "name": "dialog",
+        "value": "0 24px 64px rgba(25, 31, 40, 0.2)",
+        "purpose": "확인창. 배경막 rgba(25, 31, 40, 0.45)."
+      },
+      {
+        "name": "selected-ring",
+        "value": "0 0 0 3px #ffffff, 0 0 0 6px #191f28",
+        "purpose": "고른 보기 타일 고리."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 3px solid #3d9aff; outline-offset: 2px",
+        "purpose": "모든 :focus-visible."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "누름·등장·도장·뒤집기·막대 성장의 기본 곡선."
+      },
+      {
+        "name": "press",
+        "value": "transform scale(0.97) 120ms ease-out",
+        "purpose": "버튼·보기 타일 누름."
+      },
+      {
+        "name": "state-color",
+        "value": "150ms ease",
+        "purpose": "버튼 hover, 입력칸 포커스 바탕·고리."
+      },
+      {
+        "name": "tile-recede",
+        "value": "opacity / box-shadow 200ms ease",
+        "purpose": "고른 타일 고리, 나머지 물러남."
+      },
+      {
+        "name": "enter",
+        "value": "translateY(8px)→0 + fade, 250ms ease-out",
+        "purpose": "상태 전환 때 내용 등장."
+      },
+      {
+        "name": "stamp",
+        "value": "scale(1.3)→1 + fade, 200ms ease-out",
+        "purpose": "무대 \"마감!\" 도장."
+      },
+      {
+        "name": "dialog-in",
+        "value": "scale(0.96)→1 + fade, 200ms ease-out",
+        "purpose": "확인창 등장."
+      },
+      {
+        "name": "timer-color",
+        "value": "background/stroke 300ms ease",
+        "purpose": "타이머 마지막 5초 빨강 전환."
+      },
+      {
+        "name": "flip-in",
+        "value": "perspective(1200px) rotateX(-70deg)→0, 400ms ease-out",
+        "purpose": "정답 카드 공개."
+      },
+      {
+        "name": "grow-x",
+        "value": "scaleX(0.02)→1, 600ms ease-out, 줄마다 70ms 지연",
+        "purpose": "정답 공개 선택 인원 막대."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "fade-only 200ms ease",
+        "purpose": "prefers-reduced-motion에서 모든 등장 연출 대체, 색종이 정지."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "student-column",
+        "value": "32rem (max-w-lg)"
+      },
+      {
+        "name": "console-3col",
+        "value": "1280px (xl)"
+      },
+      {
+        "name": "stage-canvas",
+        "value": "1920x1080 고정, 창에 맞춰 scale"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "주 버튼",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "화면마다 다음 단계 하나. 진한 학교 파랑 + 흰 글씨.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">다음 문제</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 20px;border:0;border-radius:16px;font-family:'Pretendard Variable', Pretendard, -apple-system, 'Apple SD Gothic Neo', sans-serif;font-size:17px;font-weight:700;letter-spacing:-0.01em;cursor:pointer;transition:transform 120ms cubic-bezier(0.23,1,0.32,1),background-color 150ms ease;} .ds-btn-primary{background:#1f6fe0;color:#fff;} .ds-btn-primary:hover{background:#1a62c9;} .ds-btn:active{transform:scale(0.97);} .ds-btn:focus-visible{outline:3px solid #3d9aff;outline-offset:2px;}"
+    },
+    {
+      "name": "보조 버튼",
+      "kind": "button",
+      "refersTo": "button-neutral",
+      "description": "회색 바탕의 기본 버튼.",
+      "html": "<button class=\"ds-btn-n\">취소</button>",
+      "css": ".ds-btn-n{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border:0;border-radius:16px;background:#f2f4f6;color:#333d4b;font-family:'Pretendard Variable', Pretendard, -apple-system, 'Apple SD Gothic Neo', sans-serif;font-size:17px;font-weight:700;cursor:pointer;transition:transform 120ms cubic-bezier(0.23,1,0.32,1),background-color 150ms ease;} .ds-btn-n:hover{background:#e5e8eb;} .ds-btn-n:active{transform:scale(0.97);} .ds-btn-n:focus-visible{outline:3px solid #3d9aff;outline-offset:2px;}"
+    },
+    {
+      "name": "틴트 버튼",
+      "kind": "button",
+      "refersTo": "button-tint",
+      "description": "연한 파랑 바탕 + 진한 파랑 글씨의 보조 강조.",
+      "html": "<button class=\"ds-btn-t\">QR 다시 보기</button>",
+      "css": ".ds-btn-t{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border:0;border-radius:16px;background:#eef6ff;color:#1f6fe0;font-family:'Pretendard Variable', Pretendard, -apple-system, 'Apple SD Gothic Neo', sans-serif;font-size:17px;font-weight:700;cursor:pointer;transition:transform 120ms cubic-bezier(0.23,1,0.32,1),background-color 150ms ease;} .ds-btn-t:hover{background:#dbeaff;} .ds-btn-t:active{transform:scale(0.97);} .ds-btn-t:focus-visible{outline:3px solid #3d9aff;outline-offset:2px;}"
+    },
+    {
+      "name": "위험 버튼",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "되돌리기 어려운 동작(탈락 확정, 문제 무효).",
+      "html": "<button class=\"ds-btn-d\">문제 무효</button>",
+      "css": ".ds-btn-d{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border:0;border-radius:16px;background:#f04452;color:#fff;font-family:'Pretendard Variable', Pretendard, -apple-system, 'Apple SD Gothic Neo', sans-serif;font-size:17px;font-weight:700;cursor:pointer;transition:transform 120ms cubic-bezier(0.23,1,0.32,1),background-color 150ms ease;} .ds-btn-d:hover{background:#d22030;} .ds-btn-d:active{transform:scale(0.97);} .ds-btn-d:focus-visible{outline:3px solid #3d9aff;outline-offset:2px;}"
+    },
+    {
+      "name": "입력칸",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "회색 바탕, 포커스 때 흰 바탕 + 파랑 고리.",
+      "html": "<input class=\"ds-field\" placeholder=\"학번 5자리\" />",
+      "css": ".ds-field{width:100%;min-height:56px;padding:0 16px;border:0;border-radius:14px;background:#f2f4f6;color:#191f28;font-family:'Pretendard Variable', Pretendard, -apple-system, 'Apple SD Gothic Neo', sans-serif;font-size:16px;font-weight:600;transition:background-color 150ms ease,box-shadow 150ms ease;} .ds-field::placeholder{color:#8b95a1;font-weight:500;} .ds-field:focus{outline:none;background:#fff;box-shadow:0 0 0 2px #3d9aff;} .ds-field[aria-invalid=true]{box-shadow:0 0 0 2px #f04452;}"
+    },
+    {
+      "name": "라운드 알약",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "라운드·문제 유형 표시. 골든벨은 노랑, 패자부활은 초록.",
+      "html": "<span class=\"ds-chip\">본선 4/10 <span class=\"ds-chip-sub\">· 객관식</span></span> <span class=\"ds-chip ds-chip-final\">골든벨 문제</span>",
+      "css": ".ds-chip{display:inline-flex;align-items:center;gap:0.35em;padding:0.3em 0.8em;border-radius:999px;background:#fff;color:#333d4b;font-family:'Pretendard Variable', Pretendard, -apple-system, 'Apple SD Gothic Neo', sans-serif;font-weight:700;line-height:1.3;font-variant-numeric:tabular-nums;} .ds-chip-sub{font-weight:600;opacity:0.6;} .ds-chip-final{background:#ffc12e;color:#191f28;}"
+    },
+    {
+      "name": "흰 카드",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "테두리·그림자 없는 흰 둥근 카드. 회색 바탕 위에서만.",
+      "html": "<div class=\"ds-bg\"><div class=\"ds-card\">훈민정음을 창제한 왕은?</div></div>",
+      "css": ".ds-bg{background:#f2f4f6;padding:16px;} .ds-card{background:#fff;border-radius:24px;padding:24px;color:#191f28;font-family:'Pretendard Variable', Pretendard, -apple-system, 'Apple SD Gothic Neo', sans-serif;font-size:19px;font-weight:700;letter-spacing:-0.01em;}"
+    },
+    {
+      "name": "보기 타일",
+      "kind": "custom",
+      "refersTo": "key-tile-1",
+      "description": "번호 칸 + 색 타일. 고른 것만 고리, 나머지는 연한 색으로 물러남.",
+      "html": "<div class=\"ds-keys\"><button class=\"ds-key ds-o1 ds-dim1\"><span class=\"ds-badge\">1</span>태조</button><button class=\"ds-key ds-o3 ds-on\"><span class=\"ds-badge\">3</span>세종</button><button class=\"ds-key ds-o4\"><span class=\"ds-badge\">4</span>세조</button></div>",
+      "css": ".ds-keys{display:flex;flex-direction:column;gap:10px;padding:16px;background:#f2f4f6;} .ds-key{display:flex;align-items:center;gap:14px;width:100%;min-height:64px;padding:10px 16px 10px 12px;border:0;border-radius:18px;color:#fff;font-family:'Pretendard Variable', Pretendard, -apple-system, 'Apple SD Gothic Neo', sans-serif;font-size:18px;font-weight:800;text-align:left;cursor:pointer;transition:transform 120ms cubic-bezier(0.23,1,0.32,1),opacity 200ms ease,box-shadow 200ms ease;} .ds-key:active{transform:scale(0.97);} .ds-key:focus-visible{outline:3px solid #3d9aff;outline-offset:2px;} .ds-badge{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.25);font-size:18px;font-variant-numeric:tabular-nums;} .ds-o1{background:#f04452;} .ds-o3{background:#ffc12e;color:#191f28;} .ds-o3 .ds-badge{background:rgba(25,31,40,0.12);} .ds-o4{background:#0e9f5f;} .ds-on{box-shadow:0 0 0 3px #fff,0 0 0 6px #191f28;} .ds-dim1{background:color-mix(in srgb,#f04452 14%,white);color:#c21f2e;} .ds-dim1 .ds-badge{background:rgba(255,255,255,0.85);}"
+    },
+    {
+      "name": "타이머 막대",
+      "kind": "custom",
+      "refersTo": "timer-track",
+      "description": "줄어드는 파랑 막대 + 고정폭 초. 마지막 5초 빨강.",
+      "html": "<div class=\"ds-timer\"><div class=\"ds-track\"><div class=\"ds-fill\"></div></div><b class=\"ds-sec\">13</b></div>",
+      "css": ".ds-timer{display:flex;align-items:center;gap:12px;font-family:'Pretendard Variable', Pretendard, -apple-system, 'Apple SD Gothic Neo', sans-serif;} .ds-track{position:relative;flex:1;height:8px;border-radius:999px;background:#e5e8eb;overflow:hidden;} .ds-fill{position:absolute;inset:0;width:80%;border-radius:999px;background:#3d9aff;transition:background-color 300ms ease;} .ds-sec{width:48px;text-align:right;font-size:24px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums;color:#191f28;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "처음 봐도 아는 퀴즈 앱, 끝까지 다듬은 한 판",
+    "overview": "누구나 한 번쯤 써 본 퀴즈 앱의 표준 모습을 그대로 받아들이고, 그 위에서 국내 앱(토스·당근) 수준의 다듬기로 승부한다. 밝은 회색 바탕(grey-100) 위에 테두리 없는 흰 둥근 카드가 놓이고, 글자는 Pretendard 하나로 숫자까지 처리한다. 강조는 학교 파랑 하나뿐이며, 보기 타일만이 빨강·파랑·노랑·초록·보라의 다섯 색을 쓴다. 색은 언제나 번호와 함께 나온다.\n\n화면은 세 가지 밀도로 같은 체계를 공유한다. 학생 폰은 폭 가득 쌓인 색 타일과 큰 탭 영역(최소 64px)의 한 손 화면, 무대 화면은 1920×1080 고정 캔버스를 비율대로 키운 프로젝터 화면(문제 88px, 원형 타이머 큼), 진행자 콘솔은 흰 헤더와 3단 카드 격자에 파란 큰 주 버튼 하나가 다음 단계를 말해 주는 화면이다. 상태 변화는 모양과 물러남으로 전달한다. 고른 타일만 남고 나머지는 연한 색으로 한 발 물러나며, 마지막 5초는 타이머가 빨강으로 바뀐다.\n\n거절한 방향은 분명하다. 굵은 검정 테두리와 딱딱한 오프셋 그림자의 플레이풀 스타일, 남색·금색 무대 연출, 상장·OMR·안내판 같은 세계 코스튬은 사용자가 거절했다.",
+    "keyCharacteristics": [
+      "회색 바탕 + 테두리 없는 흰 카드(24px), 그림자는 거의 없음",
+      "Pretendard 한 가족, 굵기 600/700/800, 숫자는 고정폭(tnum)",
+      "학교 파랑 하나만 강조, 흰 글씨 버튼은 진한 파랑(school-deep)",
+      "보기 타일은 번호 칸 + 색, 노랑 타일만 검정 글씨",
+      "누르면 0.97로 줄어드는 120ms 반응, 큰 연출은 정답 공개 순간에만"
+    ],
+    "rules": [
+      {
+        "name": "The 한 파랑 Rule",
+        "body": "강조색은 학교 파랑 하나다. 흰 글씨 위에는 school-deep, 그 외 장식에는 school. 새 강조색을 들이지 않는다.",
+        "section": "colors"
+      },
+      {
+        "name": "The 번호와 색 Rule",
+        "body": "보기 색은 절대 혼자 쓰지 않는다. 모든 보기 타일과 공개 막대는 번호 칸(또는 보기 글자)과 함께 나온다.",
+        "section": "colors"
+      },
+      {
+        "name": "The 노랑은 검정 글씨 Rule",
+        "body": "opt3/amber 바탕에는 언제나 grey-900 글씨, 번호 칸은 흰 반투명 대신 검정 12% 반투명.",
+        "section": "colors"
+      },
+      {
+        "name": "The 굵기로 위계 Rule",
+        "body": "글꼴을 섞지 않는다. 위계는 크기와 600/700/800 세 굵기로만 만든다.",
+        "section": "typography"
+      },
+      {
+        "name": "The 숫자는 고정폭 Rule",
+        "body": "초, 인원, 점수, 코드처럼 바뀌는 숫자는 모두 tabular-nums.",
+        "section": "typography"
+      },
+      {
+        "name": "The 평평한 카드 Rule",
+        "body": "카드는 테두리도 그림자도 없다. 바탕과의 톤 차이로만 떠 있다. 그림자는 화면 위로 튀어나오는 순간(도장, 우승, 확인창)에만.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** 모든 화면 바탕을 grey-100(#f2f4f6)으로, 내용은 흰 카드(24px, 테두리·그림자 없음)에 담는다.",
+      "**Do** 흰 글씨 버튼에는 school-deep(#1f6fe0)을, 링·막대·포커스 같은 장식에는 school(#3d9aff)을 쓴다.",
+      "**Do** 보기 색에는 언제나 번호 칸을 붙이고, ① 빨강 ② 파랑 ③ 노랑 ④ 초록 ⑤ 보라 순서를 지킨다.",
+      "**Do** 누를 수 있는 것은 누르면 0.97로 줄어들게 한다(120ms, cubic-bezier(0.23, 1, 0.32, 1)). hover는 (hover: hover) 기기에서만.",
+      "**Do** 바뀌는 숫자는 모두 고정폭 800으로.",
+      "**Do** 움직임 줄이기 설정에서는 등장 연출을 200ms 투명도 변화로 바꾸고 색종이는 멈춘다."
+    ],
+    "donts": [
+      "**Don't** 굵은 검정 테두리나 딱딱한 오프셋 그림자를 쓰지 않는다(사용자가 거절한 플레이풀 방향).",
+      "**Don't** 남색·금색 무대 연출이나 상장·OMR·안내판 같은 코스튬을 들이지 않는다.",
+      "**Don't** 학교 파랑 바탕(#3d9aff)에 흰 글씨를 얹지 않는다.",
+      "**Don't** 무대 화면에서 문제를 48px 아래로, 보조 글자를 34px 아래로 내리지 않는다(막대 안 \"정답\" 알약 26px만 예외).",
+      "**Don't** 학교 로고를 늘리거나 기울이거나 다시 그리지 않고, 32px 미만으로 쓰지 않는다.",
+      "**Don't** 방송 프로그램의 로고·디자인·효과음을 흉내 내지 않는다."
+    ]
+  }
+}

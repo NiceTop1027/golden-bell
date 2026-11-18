@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: goldenbell
+      POSTGRES_PASSWORD: goldenbell
+      POSTGRES_DB: goldenbell
+    ports:
+      - "127.0.0.1:5544:5432"
+    volumes:
+      - gbdata:/var/lib/postgresql/data
+volumes:
+  gbdata:

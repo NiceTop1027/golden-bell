@@ -1,0 +1,19 @@
+{
+  "name": "golden-bell",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down",
+    "db:migrate": "pnpm --filter @gb/server db:migrate",
+    "db:seed": "pnpm --filter @gb/server db:seed",
+    "dev": "pnpm --parallel --filter @gb/server --filter @gb/web dev",
+    "build": "pnpm --filter @gb/web build",
+    "start": "pnpm --filter @gb/server start",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "bots": "pnpm --filter @gb/loadtest bots",
+    "tunnel": "cloudflared tunnel --no-autoupdate --url http://localhost:5310"
+  }
+}

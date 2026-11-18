@@ -1,0 +1,287 @@
+// 계획서 7.2 데이터 설계
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  ADMIN
+  TEACHER
+}
+
+enum Difficulty {
+  EASY
+  NORMAL
+  HARD
+}
+
+enum QuestionType {
+  OX
+  CHOICE
+  SHORT
+  INITIAL
+  NUMBER
+  ORDER
+}
+
+enum QuestionStatus {
+  DRAFT
+  SUBMITTED
+  APPROVED
+  REJECTED
+}
+
+enum MediaKind {
+  IMAGE
+  AUDIO
+  VIDEO
+}
+
+enum ContestStatus {
+  DRAFT
+  LOCKED
+  LIVE
+  FINISHED
+}
+
+enum Round {
+  PRELIM
+  MAIN
+  REVIVAL
+  FINAL
+  SPARE
+}
+
+enum ParticipantStatus {
+  ALIVE
+  ELIMINATED
+}
+
+enum JudgedBy {
+  AUTO
+  HOST
+}
+
+model User {
+  id           String   @id @default(uuid()) @db.Uuid
+  loginId      String   @unique @map("login_id")
+  passwordHash String   @map("password_hash")
+  name         String
+  role         Role
+  subject      String?
+  mustChangePw Boolean  @default(true) @map("must_change_pw")
+  isActive     Boolean  @default(true) @map("is_active")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  questions       Question[]
+  media           Media[]
+  sessions        Session[]
+  hostOf          ContestHost[]
+  createdContests Contest[]
+  hostLogs        HostLog[]
+
+  @@map("users")
+}
+
+/// 로그인 세션. 쿠키에는 원문 토큰, DB에는 해시만
+model Session {
+  id        String   @id // sha256(토큰)
+  userId    String   @map("user_id") @db.Uuid
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime @map("expires_at")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([userId])
+  @@map("sessions")
+}
+
+model Question {
+  id           String         @id @default(uuid()) @db.Uuid
+  authorId     String         @map("author_id") @db.Uuid
+  author       User           @relation(fields: [authorId], references: [id])
+  subject      String
+  grade        Int?
+  difficulty   Difficulty
+  type         QuestionType
+  body         String
+  mediaId      String?        @map("media_id") @db.Uuid
+  media        Media?         @relation(fields: [mediaId], references: [id])
+  config       Json
+  explanation  String?
+  timeLimitSec Int?           @map("time_limit_sec")
+  authorNote   String?        @map("author_note")
+  status       QuestionStatus @default(DRAFT)
+  reviewNote   String?        @map("review_note")
+  createdAt    DateTime       @default(now()) @map("created_at")
+  updatedAt    DateTime       @updatedAt @map("updated_at")
+
+  contestQuestions ContestQuestion[]
+
+  @@index([authorId, status])
+  @@index([status])
+  @@map("questions")
+}
+
+model Media {
+  id         String    @id @default(uuid()) @db.Uuid
+  uploaderId String    @map("uploader_id") @db.Uuid
+  uploader   User      @relation(fields: [uploaderId], references: [id])
+  kind       MediaKind
+  path       String
+  mime       String
+  size       Int
+  createdAt  DateTime  @default(now()) @map("created_at")
+
+  questions Question[]
+
+  @@map("media")
+}
+
+model Contest {
+  id        String        @id @default(uuid()) @db.Uuid
+  title     String
+  heldOn    DateTime      @map("held_on") @db.Date
+  joinCode  String        @unique @map("join_code") @db.Char(6)
+  stageKey  String        @map("stage_key")
+  rules     Json
+  useRoster Boolean       @default(false) @map("use_roster")
+  status    ContestStatus @default(DRAFT)
+  createdBy String        @map("created_by") @db.Uuid
+  creator   User          @relation(fields: [createdBy], references: [id])
+  createdAt DateTime      @default(now()) @map("created_at")
+
+  hosts        ContestHost[]
+  questions    ContestQuestion[]
+  roster       RosterEntry[]
+  participants Participant[]
+  run          ContestRun?
+  logs         HostLog[]
+
+  @@map("contests")
+}
+
+model ContestHost {
+  contestId String  @map("contest_id") @db.Uuid
+  contest   Contest @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  userId    String  @map("user_id") @db.Uuid
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([contestId, userId])
+  @@map("contest_hosts")
+}
+
+model ContestQuestion {
+  id           String   @id @default(uuid()) @db.Uuid
+  contestId    String   @map("contest_id") @db.Uuid
+  contest      Contest  @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  questionId   String   @map("question_id") @db.Uuid
+  question     Question @relation(fields: [questionId], references: [id])
+  orderNo      Int      @map("order_no")
+  round        Round
+  timeLimitSec Int?     @map("time_limit_sec")
+  /// 편성 잠금 때 복사한 문제 내용·정답
+  snapshot     Json?
+  voided       Boolean  @default(false)
+
+  submissions Submission[]
+
+  @@index([contestId, orderNo])
+  @@map("contest_questions")
+}
+
+model RosterEntry {
+  id        String  @id @default(uuid()) @db.Uuid
+  contestId String  @map("contest_id") @db.Uuid
+  contest   Contest @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  studentNo String  @map("student_no")
+  name      String
+  className String? @map("class_name")
+
+  @@unique([contestId, studentNo])
+  @@map("roster_entries")
+}
+
+model Participant {
+  id                String            @id @default(uuid()) @db.Uuid
+  contestId         String            @map("contest_id") @db.Uuid
+  contest           Contest           @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  studentNo         String            @map("student_no")
+  name              String
+  team              String?
+  tokenHash         String            @map("token_hash")
+  status            ParticipantStatus @default(ALIVE)
+  /// 탈락한 문제
+  eliminatedAt      String?           @map("eliminated_at") @db.Uuid
+  /// 몇 번째 확정에서 탈락했는지 (순위 계산용, 클수록 늦게 탈락)
+  eliminatedSeq     Int?              @map("eliminated_seq")
+  revivedCount      Int               @default(0) @map("revived_count")
+  joinedAt          DateTime          @default(now()) @map("joined_at")
+
+  submissions Submission[]
+
+  @@unique([contestId, studentNo])
+  @@map("participants")
+}
+
+model Submission {
+  id                String          @id @default(uuid()) @db.Uuid
+  contestQuestionId String          @map("contest_question_id") @db.Uuid
+  contestQuestion   ContestQuestion @relation(fields: [contestQuestionId], references: [id], onDelete: Cascade)
+  participantId     String          @map("participant_id") @db.Uuid
+  participant       Participant     @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  answer            Json
+  isCorrect         Boolean         @map("is_correct")
+  judgedBy          JudgedBy        @default(AUTO) @map("judged_by")
+  receivedAt        DateTime        @map("received_at")
+
+  @@unique([participantId, contestQuestionId])
+  @@index([contestQuestionId])
+  @@map("submissions")
+}
+
+/// 진행 상태 (장애 복구용)
+model ContestRun {
+  contestId         String   @id @map("contest_id") @db.Uuid
+  contest           Contest  @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  phase             String
+  currentCqId       String?  @map("current_cq_id") @db.Uuid
+  endsAt            DateTime? @map("ends_at")
+  pausedRemainingMs Int?     @map("paused_remaining_ms")
+  revivalUsed       Int      @default(0) @map("revival_used")
+  /// 엔진 진행 상태 전체 (되돌리기용 직전 상태 포함)
+  snapshot          Json
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  @@map("contest_runs")
+}
+
+model HostLog {
+  id        BigInt   @id @default(autoincrement())
+  contestId String   @map("contest_id") @db.Uuid
+  contest   Contest  @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  actorId   String?  @map("actor_id") @db.Uuid
+  actor     User?    @relation(fields: [actorId], references: [id])
+  action    String
+  payload   Json
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([contestId, createdAt])
+  @@map("host_logs")
+}
+
+/// 관리자가 고치는 과목 목록. 문제는 과목 이름을 글자로 가짐 (이름을 바꾸면 문제도 함께 바꿈)
+model Subject {
+  id        String   @id @default(uuid()) @db.Uuid
+  name      String   @unique
+  group     String   @map("group_name")
+  sortOrder Int      @default(0) @map("sort_order")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([sortOrder])
+  @@map("subjects")
+}

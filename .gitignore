@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+apps/server/src/generated
+apps/server/uploads
+.playwright-mcp/
+.impeccable/review/
+.impeccable/questions/
+.impeccable/mocks/
+.impeccable/config.local.json
+*.log
+.secrets/

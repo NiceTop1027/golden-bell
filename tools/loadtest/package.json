@@ -1,0 +1,14 @@
+{
+  "name": "@gb/loadtest",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bots": "tsx bots.ts"
+  },
+  "dependencies": {
+    "@gb/shared": "workspace:*",
+    "socket.io-client": "4.8.4"
+  },
+  "devDependencies": { "tsx": "4.23.15" }
+}
